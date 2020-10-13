@@ -47,7 +47,7 @@ int main(){
   // Creazione classe OdeSolver (per la soluzione dell'equ. diff.)
   ode.fInterna = fInterna;
   ode.fEsterna = fEsterna;
-  ode.Passo(0.1);
+  ode.Passo(0.5);
 
   
   //Creazione dei grafici (uno per pianeta)
@@ -59,7 +59,7 @@ int main(){
   gPad->DrawFrame(-size,-size,size,size);
   int color[10]={kOrange+1,kViolet+1,kGreen+2,kAzure+1,kRed+2,kRed-7,kCyan-8,kBlue-7,kBlue+1,kBlue+2};
   for (unsigned int i=0;i<ode.N();i++){
-    gr[i].SetPoint(i,ode.Punto(i).R().X(),ode.Punto(i).R().Y());
+    gr[i].SetPoint(0,ode.Punto(i).R().X(),ode.Punto(i).R().Y());
     gr[i].SetMarkerColor(color[i]); gr[i].SetMarkerStyle(20); gr[i].SetMarkerSize(0.1);
     if (i==0) gr[i].SetMarkerSize(1);
     gr[i].Draw("P");

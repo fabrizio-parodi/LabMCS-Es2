@@ -10,7 +10,7 @@ using namespace std;
 class OdeSolver{
  public:
   OdeSolver(string method="Eulero", vector<PuntoMateriale> p=vector<PuntoMateriale>(0)):m_method(method),m_p(p),m_t(0),m_h(0.1){}
-  void                   Punto(unsigned int i,PuntoMateriale tmp);
+  void                   Punto(PuntoMateriale tmp);
   PuntoMateriale         Punto(unsigned int i);
   vector<PuntoMateriale> Punti();
   unsigned int   N();

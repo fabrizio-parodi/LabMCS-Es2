@@ -1,8 +1,8 @@
 #include "Vettore.h"
 #include "OdeSolver.h"
 
-void OdeSolver::Punto(unsigned int i,PuntoMateriale tmp){
-  m_p[i] = tmp;
+void OdeSolver::Punto(PuntoMateriale tmp){
+  m_p.push_back(tmp);
 }
 
 vector<PuntoMateriale> OdeSolver::Punti(){
