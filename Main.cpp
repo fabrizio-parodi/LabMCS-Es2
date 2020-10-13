@@ -68,7 +68,7 @@ int main(){
   app.Run(true);
 
   //Run del metodo numerico + grafico in tempo reale delle coordinate e del mom. angolare totale
-  while (ode.T()<1000){
+  while (ode.T()<365){
     ode.Cinematica();
     for (unsigned int i=0;i<ode.N();i++){
       //STEP 4 riempimento delle grafico gr[i] con le coordinate aggiornate dei pianeti
