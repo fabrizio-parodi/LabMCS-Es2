@@ -28,7 +28,6 @@ Vettore fEsterna(unsigned int i, double t, vector<PuntoMateriale> p){
 
 int main(){ 
   /*
-
   TApplication app("app",0,NULL);
   gStyle->SetOptStat(0);
 
@@ -46,7 +45,6 @@ int main(){
   //   - creazione di vector<PuntoMateriale> e poi creazione di OdelSover
 
   // Creazione classe OdeSolver (per la soluzione dell'equ. diff.)
-  // OdeSolver ode(p,"Eulero");
   ode.fInterna = fInterna;
   ode.fEsterna = fEsterna;
   ode.Passo(0.1);
