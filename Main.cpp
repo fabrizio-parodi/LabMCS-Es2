@@ -53,7 +53,7 @@ int main(){
 
   
   //Creazione dei grafici (uno per pianeta)
-  vector<TGraph> gr(p.size());
+  vector<TGraph> gr(ode.N());
   TCanvas c("c","",10,10,500,500);
   
   //Preparazione grafico delle coordinate dei pianeti
@@ -75,10 +75,7 @@ int main(){
     for (unsigned int i=0;i<ode.N();i++){
       //STEP 4 riempimento delle grafico gr[i] con le coordinate aggiornate dei pianeti
     } 
-
-    if (grL1.GetN()%1000==0){
-      gPad->Modified(); gPad->Update();
-    }
+    gPad->Modified(); gPad->Update();
   }
 
   app.Run(true);
