@@ -15,10 +15,7 @@ class PuntoMateriale: public Particella{
   PuntoMateriale(double massa, double carica, Vettore r, Vettore v):PuntoMateriale(Particella(massa,carica),r,v){}
 
   Vettore R();    
-  double  Beta();
-  double  Gamma();
   Vettore V();
-  Vettore P();
   void    R(Vettore);
   void    V(Vettore);
 

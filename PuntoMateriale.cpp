@@ -10,18 +10,6 @@ Vettore PuntoMateriale::V(){
   return m_v;
 }
 
-double PuntoMateriale::Beta(){
-  return V().Mod()*(1/consts::c);
-}
-
-double PuntoMateriale::Gamma(){
-  return 1/sqrt(1-Beta()*Beta());
-}
-
-Vettore PuntoMateriale::P(){
-  return Gamma()*Massa()*V();
-}
-
 void PuntoMateriale::R(Vettore r){
   m_r = r;
 }
