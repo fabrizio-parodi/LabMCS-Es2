@@ -12,10 +12,10 @@ class Vettore{
   double  Z() const;
   void    Z(double);
   Vettore operator-();            // - unario
-  Vettore operator-( Vettore);    // - binario
-  Vettore operator+( Vettore);    // + binario     
-  double  operator*( Vettore);    // prod. scalare 
-  Vettore operator^( Vettore);    // prod. vettore 
+  Vettore operator-(Vettore);     // - binario
+  Vettore operator+(Vettore);     // + binario     
+  double  operator*(Vettore);     // prod. scalare 
+  Vettore Cross(Vettore);         // prod. vettore 
   Vettore operator*(double);      // molt. per scalare
   double  Mod();                  // modulo  (da impl.)
   Vettore Vers();                 // versore (da impl.)

@@ -60,11 +60,11 @@ double Vettore::operator*( Vettore b){
   return prod;
 }
 
-Vettore Vettore::operator^( Vettore b){
+Vettore Vettore::Cross( Vettore b){
   Vettore res;
-  res.X(m_v[1]*b.m_v[2]-b.m_v[1]*m_v[2]);
-  res.Y(m_v[2]*b.m_v[0]-b.m_v[2]*m_v[0]);
-  res.Z(m_v[0]*b.m_v[1]-b.m_v[0]*m_v[1]);
+  res.m_v[0] = m_v[1]*b.m_v[2]-b.m_v[1]*m_v[2];
+  res.m_v[1] = m_v[2]*b.m_v[0]-b.m_v[2]*m_v[0];
+  res.m_v[2] = m_v[0]*b.m_v[1]-b.m_v[0]*m_v[1];
   return res;
 }
 
